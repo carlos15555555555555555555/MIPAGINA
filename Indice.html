@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeCreations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+    .menu-principal {
+      background-color: #fce4ec;
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .menu-contenedor {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Georgia', serif;
+      font-size: 30px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .subtitulo {
+      margin-left: 10px;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .menu-items {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .menu-items a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .menu-items a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+    }
+
+    .content {
+      padding-top: 100px;
+      color: #333;
+    }
+
+    section {
+      padding: 30px 40px;
+      max-width: 1200px;
+      margin: 40px auto 0 auto;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #000;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      background-color: #fce4ec;
+      padding: 30px 20px;
+      text-align: center;
+      color: #555;
+      margin-top: 60px;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .card {
+      background: #fff0f5;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      flex-shrink: 0;
+      padding: 20px;
+      text-align: center;
+      margin: 0 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Carrusel */
+    .carrusel-wrap {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    }
+
+    .carrusel-interno {
+      display: flex;
+      gap: 20px;
+      animation: moverCarrusel 10s linear infinite;
+    }
+
+    @keyframes moverCarrusel {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Colaboraciones en vertical */
+    .colaboraciones-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+   margin-left: 50px; /* alineado a la izquierda */
+  padding-left: 10px; /* puedes ajustar el espacio desde el borde */
+}
+
+.colaboraciones-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.banner-container {
+  margin-top: 80px; /* para no tapar el menú fijo */
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* 🔽 AJUSTA este valor si lo quieres más bajo */
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+section#destacados {
+  padding-top: 5px; /* 🔽 reduce espacio superior */
+  margin-top: 0;     /* 🔽 elimina separación extra */
+}
+
+
+  </style>
+</head>
+<body>
+  <header class="menu-principal">
+    <div class="menu-contenedor">
+      <div class="logo-area">
+        <div class="logo">B&C</div>
+        <div class="subtitulo">Belleza natural</div>
+      </div>
+      <nav class="menu-items">
+        <a href="#">Inicio</a>
+        <a href="Index.html">Productos</a>
+        <a href="Acercanos.html">Acerca de</a>
+        <a href="contactos.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Banner principal -->
+<div class="banner-container">
+  <img src="img\Banner para Mercado Shops Productos de Belleza Simple Blanco.png" alt="Banner Promocional" class="banner-img">
+</div>
+
+
+  <div class="content">
+    <!-- Sección de productos destacados con carrusel -->
+    <section id="destacados">
+      <h2 class="section-title">Productos Destacados</h2>
+      <div class="carrusel-wrap">
+        <div class="carrusel-interno">
+          <!-- Productos duplicados para loop infinito -->
+          <div class="card"><img src="https://img.freepik.com/fotos-premium/artista-maquillaje-aplicando-eyeliner-crear-aspecto-dramatico-que-hace-hincapie-arte-habilidad-involucrados-aplicacion-maquillaje_86390-45505.jpg" alt="Producto 1"><h3>Delineador</h3><p>¡Define tu mirada con un solo trazo! El delineador es el secreto para ojos impactantes, ya sea para un look sutil y elegante o uno audaz y dramático.</p></div>
+          <div class="card"><img src="https://img.freepik.com/foto-gratis/paleta-maquillaje_1385-1054.jpg" alt="Producto 2"><h3>Paleta de colores</h3><p>Despierta tu creatividad con una paleta de colores. Este tesoro de sombras te ofrece un universo de posibilidades para tus ojos.</p></div>
+          <div class="card"><img src="https://img.freepik.com/vector-gratis/anuncio-cosmetico-producto-lapiz-labial_52683-31206.jpg" alt="Producto 3"><h3>Labiales</h3><p>El toque final perfecto. Añade color y personalidad a tus labios. ¡Listo para conquistar el día!</p></div>
+          <div class="card"><img src="https://st.depositphotos.com/1004713/4416/i/450/depositphotos_44166091-stock-photo-woman-with-lip-gloss.jpg" alt="Producto 4"><h3>Labial líquido</h3><p>Colores vibrantes que se mantienen por horas. ¡Perfecto para un color que no te abandona!</p></div>
+          <div class="card"><img src="https://img.freepik.com/vector-premium/ilustracion-productos-cuidado-piel-locion-corporal-raspado-crema-jabon-liquido-objeto-cosmetico-plano-tubo-hoja_439591-462.jpg" alt="Producto 5"><h3>Crema Hidratante</h3><p>Hidratar tu rostro diariamente es la clave para una piel radiante y saludable.</p></div>
+
+          <!-- Duplicados para loop infinito -->
+          <div class="card"><img src="https://img.freepik.com/fotos-premium/artista-maquillaje-aplicando-eyeliner-crear-aspecto-dramatico-que-hace-hincapie-arte-habilidad-involucrados-aplicacion-maquillaje_86390-45505.jpg" alt="Producto 1"><h3>Delineador</h3><p>¡Define tu mirada con un solo trazo!</p></div>
+          <div class="card"><img src="https://img.freepik.com/foto-gratis/paleta-maquillaje_1385-1054.jpg" alt="Producto 2"><h3>Paleta de colores</h3><p>Explora nuevas combinaciones y tonos.</p></div>
+          <div class="card"><img src="https://img.freepik.com/vector-gratis/anuncio-cosmetico-producto-lapiz-labial_52683-31206.jpg" alt="Producto 3"><h3>Labiales</h3><p>Color vibrante para cada día.</p></div>
+          <div class="card"><img src="https://st.depositphotos.com/1004713/4416/i/450/depositphotos_44166091-stock-photo-woman-with-lip-gloss.jpg" alt="Producto 4"><h3>Labial líquido</h3><p>Duración y estilo en un solo paso.</p></div>
+          <div class="card"><img src="https://img.freepik.com/vector-premium/ilustracion-productos-cuidado-piel-locion-corporal-raspado-crema-jabon-liquido-objeto-cosmetico-plano-tubo-hoja_439591-462.jpg" alt="Producto 5"><h3>Crema Hidratante</h3><p>Suavidad y frescura todo el día.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Colaboraciones -->
+   <!-- Colaboraciones en fila horizontal -->
+<section id="colaboraciones">
+  <h2 class="section-title">Colaboraciones</h2>
+  <div class="colaboraciones-container">
+    <div class="card">
+      <img src="https://img.freepik.com/vector-premium/patron-esponjas-cepillos-productos-cosmeticos_87689-6266.jpg?ga=GA1.1.1986725115.1748978684&semt=ais_hybrid&w=740" alt="Colaboración 1" />
+      <h3>YeriMua</h3>
+      <p>Colaboración especial de la mano con Yerimua</p>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/vector-premium/conjunto-cereza-dibujada-mano-paquete-ingredientes-cocina-vegetariana-dieta-fresca-estilo-dibujos-animados-plano_281155-491.jpg?ga=GA1.1.1986725115.1748978684&semt=ais_hybrid&w=740" alt="Colaboración 2" />
+      <h3>Betty Boop </h3>
+      <p>Juntos creando belleza auténtica.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-coral-dibujado-mano_23-2150532077.jpg?ga=GA1.1.1986725115.1748978684&semt=ais_hybrid&w=740" alt="Colaboración 3" />
+      <h3>Bob Esponja</h3>
+      <p>Diversion en nuestros productos</p>
+    </div>
+   
+  </div>
+</section>
+
+
+    <!-- Informativa -->
+    <section id="info">
+      <h2 class="section-title">Nuestra Belleza</h2>
+      <p style="max-width: 700px; margin: auto; font-size: 16px;">
+        BeCreations celebra la belleza natural a través de productos únicos. Descubre cosméticos, cuidados para el cabello, piel y fragancias con ingredientes suaves y efectivos.
+      </p>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 BeCreations. Todos los derechos reservados.</p>
+    <p>Síguenos en:
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-tiktok"></i>
+    </p>
+  </footer>
+</body>
+</html>

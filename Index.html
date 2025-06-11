@@ -1,0 +1,304 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beauty Creations</title>
+    <script src="Carritos.js"></script>
+    <style>
+
+
+        /* GENERAL */
+        body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff0f5;
+    padding-top: 80px; /* <-- Agrega esto */
+}
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px 20px;
+            gap: 80px;
+        }
+
+        /* PRODUCTOS */
+        #productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            flex: 2;
+            max-width: 1000px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+         footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 12px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.1rem;
+            color: #e91e63;
+            margin: 10px 0 5px;
+        }
+
+        .product p {
+            margin: 0 0 10px;
+        }
+
+        .product button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #c2185b;
+        }
+
+        /* CARRITO */
+        .cart {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            max-width: 300px;
+            flex: 1;
+            height: fit-content;
+        }
+
+        .cart h2 {
+            margin-top: 0;
+            color: #e91e63;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        #cartItems {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        #cartItems li {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 0;
+        }
+
+        .cart button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            background-color: #e91e63;
+            color: white;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cart button:hover {
+            background-color: #c2185b;
+        }
+            .menu-items {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .menu-items a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .menu-items a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+    }
+    
+.menu-principal {
+      background-color: #fce4ec;
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .menu-contenedor {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Georgia', serif;
+      font-size: 30px;
+      color: #333;
+      font-weight: bold;
+    }
+    .subtitulo {
+      margin-left: 10px;
+      font-size: 16px;
+      color: #444;
+    }
+    </style>
+</head>
+ 
+<body>
+
+     <header class="menu-principal">
+    <div class="menu-contenedor">
+      <div class="logo-area">
+        <div class="logo">B&C</div>
+        <div class="subtitulo">Belleza natural</div>
+      </div>
+      <nav class="menu-items">
+        <a href="Indice.html">Inicio</a>
+        <a href="Index.html">Productos</a>
+        <a href="Acercanos.html">Acerca de</a>
+        <a href="contactos.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+    <div class="container">
+        <!-- Productos -->
+       
+<div id="productos">
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/bcc-backup-beauty-creations-primer-stick-matte-primer-cosmetics-ps01-571810.jpg?v=1723566004" alt="Base de maquillaje" />
+        <h3>Base de maquillaje</h3>
+        <p>Precio: $200</p>
+
+        <button onclick="addToCart('Base de maquillaje', 200)">Agregar al carrito</button>
+    </div>
+
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/beauty-creations-mx-bye-filter-polvo-fijador-cosmetics-bfp04-361754.jpg?v=1723542261" alt="Maquillaje en Polvo" />
+        <h3>Maquillaje en Polvo</h3>
+        <p>Precio: $180</p>
+ 
+        <button onclick="addToCart('Maquillaje en Polvo', 180)">Agregar al carrito</button>
+    </div>
+
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/bcc-backup-beauty-creations-roller-gloss-cherry-cosmetics-ltb02-604209_514d0643-8e5b-4a21-8464-89a49b8a3837.jpg?v=1723573624" alt="Gloss" />
+        <h3>Gloss</h3>
+        <p>Precio: $80</p>
+       
+        <button onclick="addToCart('Gloss', 80)">Agregar al carrito</button>
+    </div>
+
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/bcc-backup-beauty-creations-floral-bloom-eye-bloom-paleta-de-sombras-cosmetics-ep12-490604.jpg?v=1723505345" alt="Paleta de sombras" />
+        <h3>Paleta de sombras</h3>
+        <p>Precio: $400</p>
+     
+        <button onclick="addToCart('Paleta de sombras', 400)">Agregar al carrito</button>
+    </div>
+
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/beauty-creations-mx-bye-filter-polvo-fijador-cosmetics-bfp04-361754.jpg?v=1723542261" alt="Polvo Compacto" />
+        <h3>Polvo Compacto</h3>
+        <p>Precio: $100</p>
+
+        <button onclick="addToCart('Polvo Compacto', 100)">Agregar al carrito</button>
+    </div>
+
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/bcc-backup-beauty-creations-x-yerimua-duo-de-labios-bad-btch-labial-y-delineador-cosmetics-yml2-627452.jpg?v=1723545578" alt="Delineador de Labios" />
+        <h3>Delineador de Labios</h3>
+        <p>Precio: $130</p>
+   
+        <button onclick="addToCart('Delineador de Labios', 130)">Agregar al carrito</button>
+    </div>
+
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/beauty-creations-mx-toallita-desmaquillante-cosmetics-skw-06-866163.webp?v=1723582025" alt="Toallitas Desmaquilladoras" />
+        <h3>Toallitas Desmaquilladoras</h3>
+        <p>Precio: $120</p>
+
+        <button onclick="addToCart('Toallitas Desmaquilladoras', 120)">Agregar al carrito</button>
+    </div>
+
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/bcc-backup-beauty-creations-skin-balsamo-desmaquillante-so-balm-cleansing-balm-skin-care-cosmetics-sk-sbb-324720.jpg?v=1723481722" alt="Balsamo desmaquillante" />
+        <h3>Balsamo desmaquillante</h3>
+        <p>Precio: $220</p>
+ 
+        <button onclick="addToCart('Balsamo desmaquillante', 220)">Agregar al carrito</button>
+    </div>
+
+    <div class="product">
+        <img src="https://beautycreationscosmetics.com.mx/cdn/shop/files/bcc-backup-beauty-creations-set-de-brochas-24-piezas-unbothered-set-de-brochas-cosmetics-bs-ub-574876.webp?v=1723939070" alt="Set de brochas 24 piezas" />
+        <h3>Set de brochas 24 piezas</h3>
+        <p>Precio: $600</p>
+   
+        <button onclick="addToCart('Set de brochas 24 piezas', 600,)">Agregar al carrito</button>
+    </div>
+</div>
+
+        <!-- Carrito -->
+        <div class="cart">
+            <h2>Carrito de compras</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: $<span id="totalPrice">0</span></p>
+            <button onclick="realizarPago()">Realizar pago MERCADO PAGO</button>
+            <button onclick="realizarPagoPaypal()">Realizar pago De PayPal</button>
+        </div>
+    </div>
+
+    <script src="Carritos.js"></script>
+    
+    <footer>
+        &copy; 2025 BeCreations. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

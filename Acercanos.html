@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BeCreations - Belleza y Estilo</title>
+    <style>
+   
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        /* SECCIÓN DE BIENVENIDA */
+        .welcome {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+
+        .welcome h1 {
+            font-size: 3rem;
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+
+        .welcome p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+        }
+
+        /* HISTORIA */
+        #historia {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 0 auto 60px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        #historia h2 {
+            text-align: center;
+            color: #e91e63;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        /* CONTACTO */
+        #contacto {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 60px;
+        }
+
+        #contacto h2 {
+            color: #e91e63;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #contacto form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #contacto input, #contacto textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            resize: vertical;
+        }
+
+        #contacto button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #contacto button:hover {
+            background-color: #c2185b;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+            font-size: 0.9rem;
+        }
+                .menu-items {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .menu-items a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .menu-items a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+    }
+    
+.menu-principal {
+      background-color: #fce4ec;
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .menu-contenedor {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Georgia', serif;
+      font-size: 30px;
+      color: #333;
+      font-weight: bold;
+    }
+    .subtitulo {
+      margin-left: 10px;
+      font-size: 16px;
+      color: #444;
+    }
+    </style>
+</head>
+<body>
+   <header class="menu-principal">
+    <div class="menu-contenedor">
+      <div class="logo-area">
+        <div class="logo">B&C</div>
+        <div class="subtitulo">Belleza natural</div>
+      </div>
+      <nav class="menu-items">
+        <a href="Indice.html">Inicio</a>
+        <a href="Index.html">Productos</a>
+        <a href="Acercanos.html">Acerca de</a>
+        <a href="contactos.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+    <section id="welcome" class="welcome">
+        <h1>BeCreations</h1>
+        <p>Innovando en belleza y estilo, te ofrecemos los mejores productos para resaltar tu belleza natural y sentirte única todos los días.</p>
+    </section>
+
+    <section id="historia" class="container">
+        <h2>Nuestra Historia</h2>
+        <p>
+            BeCreations nació en 2010 con la visión de transformar la industria de la belleza en México. Lo que empezó como un pequeño emprendimiento familiar,
+            rápidamente creció gracias a la pasión por crear productos innovadores y accesibles para todos. Nuestra misión siempre ha sido empoderar a las personas
+            para que expresen su individualidad a través del maquillaje y el cuidado personal, utilizando ingredientes de calidad y un diseño cuidadoso.
+        </p>
+        <p>
+            A lo largo de los años, hemos desarrollado colecciones que reflejan las últimas tendencias y valoramos la sustentabilidad en cada paso,
+            desde la producción hasta el empaquetado. BeCreations no solo es una marca, es una comunidad que celebra la creatividad, la confianza y la belleza en todas sus formas.
+        </p>
+        <p>
+            Gracias por ser parte de nuestra historia. Juntos, continuamos creando belleza que inspira.
+        </p>
+    </section>
+
+  
+    <footer>
+        &copy; 2025 BeCreations. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
